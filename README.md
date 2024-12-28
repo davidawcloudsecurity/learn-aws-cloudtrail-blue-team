@@ -9,11 +9,15 @@ for file in *.json; do jq . "$file" > "$file.tmp" && mv "$file.tmp" "$file"; don
 ```bash
 grep -r userName | sort -u
 ```
-### Check if STS Get-Caller-Identity called
+### Check if STS Get-Caller-Identity called and check ip address and which aws account it came from
 ```bash
 # Or statement
-grep -rE 'temp-user|s3' . | sort -u
 grep -rE 'temp-user|GetCallerIdentity' | sort -u
 # Expand 
 grep -h -A 10 'temp-user' | sort -u
 ```
+### Check if files were pull from s3 buckets
+```bash
+grep -rE 'temp-user|s3' . | sort -u
+```
+

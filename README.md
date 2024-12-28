@@ -1,6 +1,11 @@
 # learn-aws-cloudtrail-blue-team
 how to read cloudtrail logs like a blue team
 
+Download sample json file
+```bash
+wget -O custom_filename.zip "https://cdn.discordapp.com/attachments/1145109454346522654/1146038520868245526/INCIDENT-3252.zip?ex=677084cb&is=676f334b&hm=a0addc7846dc7c7886c1c863b690e78134173f867f44887e58e014e767edb675"
+```
+
 ### Format files into JSON
 ```bash
 for file in *.json; do jq . "$file" > "$file.tmp" && mv "$file.tmp" "$file"; done

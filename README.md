@@ -13,11 +13,13 @@ grep -r userName | sort -u
 ```bash
 # Or statement
 grep -rE 'temp-user|GetCallerIdentity' | sort -u
+curl ipinfo.io/<ip address>
 # Expand 
-grep -h -A 10 'temp-user' | sort -u
+grep -h -A 10 'temp-user' <file> | sort -u
 ```
 ### Check if files were pull from s3 buckets
 ```bash
-grep -rE 'temp-user|s3' . | sort -u
+grep -rE 'temp-user|s3|ListObjects' . | sort -u
 ```
+
 

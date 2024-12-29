@@ -26,7 +26,7 @@ grep -h -A 10 'temp-user' <file> | sort -u
 ```
 ### Check if files were pull from s3 buckets
 ```bash
-grep -rE 'temp-user|s3|ListObjects' . | sort -u
+grep -rE 'temp-user|s3|ListObjects|GetObject' . | sort -u
 ```
 ### If user doesn't have elevated policy, check if AssumeRole is next
 ```bash
